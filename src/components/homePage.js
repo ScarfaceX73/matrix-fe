@@ -2,7 +2,10 @@ import React from 'react';
 import "./home.css";
 
 const Home = ({ data }) => {
-    console.log(data?.query?.current?.cloud);
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const d = new Date();
+    let day = weekday[d.getDay()];
+
     return (
         <div className='home' id='home'>
             <div className='topbar'>
@@ -40,9 +43,8 @@ const Home = ({ data }) => {
                 <div>
                     <div className='info-sm'>
                         <h3>{data[0]?.query?.location?.name}</h3>
-                        <span>06.45</span>
-                        <span>Thursday</span>
-                        <span>09/03/23</span>
+                        <span>{day}</span>
+                        <span>{data[0]?.query?.location?.localtime}</span>
                     </div>
                 </div>
                 <div>

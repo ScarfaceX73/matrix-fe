@@ -124,9 +124,73 @@ input::placeholder {
   margin-top: 219px;
 }
 
+.inp-btn {
+  background-color: inherit;
+  border: none;
+  color: rgba(0, 0, 0, 0.53);
+  font-size: 30px;
+  position: relative;
+  left: -60px;
+  top: 8px;
+  cursor: pointer;
+}
+
 .globe {
   height: 711px;
   background-color: black;
   display: flex;
   justify-content: center;
+  background-image: url(../img/earth.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 376px 376px 376px;
+  grid-template-rows: 130px 130px;
+  column-gap: 90px;
+  row-gap: 62px;
+}
+
+.grid > div {
+  width: 376px;
+  height: 130px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  opacity: 0.8;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  margin-top: 135px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #ffffff;
+}
+
+.grid > div > h1 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 96px;
+  margin-left: 38px;
+}
+
+.grid > div > span {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.grid > div > p {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  margin-left: 35px;
+}
+
+#cities {
+  transition: all 1s ease-in-out 0s;
 }
