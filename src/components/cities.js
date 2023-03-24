@@ -39,7 +39,7 @@ const Cities = ({ data }) => {
                 <div>
                     <h1>Cities</h1>
                     <div className='weather-cards'>
-                        <div className='thunder-box'>
+                        <div className='thunder-box card'>
                             <h3>{data[0]?.query?.current?.condition?.text}</h3>
                             <div className='mar-up'>
                                 <h1>{data[0]?.query?.current?.temp_c}</h1><span>°</span>
@@ -51,7 +51,7 @@ const Cities = ({ data }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className='cloud-box'>
+                        <div className='cloud-box card'>
                             <h3>{data[1]?.query?.current?.condition?.text}</h3>
                             <div className='mar-up'>
                                 <h1>{data[1]?.query?.current?.temp_c}</h1><span>°</span>
@@ -63,7 +63,7 @@ const Cities = ({ data }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className='sun-box'>
+                        <div className='sun-box card'>
                             <h3>{data[2]?.query?.current?.condition?.text}</h3>
                             <div className='mar-up'>
                                 <h1>{data[2]?.query?.current?.temp_c}</h1><span>°</span>
