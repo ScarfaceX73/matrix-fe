@@ -34,10 +34,10 @@ const News = ({ data }) => {
                             <a href='#home'>Home</a>
                         </li>
                         <li>
-                            <a href='cities'>Cities</a>
+                            <a href='#cities'>Cities</a>
                         </li>
                         <li>
-                            <a href='news'>News</a>
+                            <a href='#news'>News</a>
                         </li>
                     </ul>
                     <ul>
