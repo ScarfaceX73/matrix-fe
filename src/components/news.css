@@ -24,69 +24,47 @@
   margin: 52px 19px 0px 19px;
   position: relative;
   transition: all 0.3s ease 0s;
+  overflow: hidden;
 }
 
 .news-cards > div > p {
-  width: 247px;
+  /* width: 247px; */
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
   margin: 282px 0px 46px 23px;
   transition: all 0.3s ease 0s;
-  position: relative;
-}
-
-.news-cards > div::before {
-  background-repeat: no-repeat;
-  content: "";
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  border-radius: 20px;
+  transition: all 0.5s ease-out;
 }
 
-.thunder::before {
-  background: url(../img/thunder.png);
+
+.button_hover_card:hover {
+  transform: scale(1.1);
 }
 
-.sun::before {
-  background: url(../img/sun.png);
+
+.view_more_btn{
+  cursor: pointer;
+  display: none;
+  background: transparent;
+  font-size: large;
+  margin-top: 150px;
+  margin-left: 80px;
+  color: aliceblue;
+  padding: 5px;
+  border-color: aliceblue;
+  border-width: 2px;
+  border-radius: 5px;
 }
 
-.cloud::before {
-  background: url(../img/cloud.png);
+.button_hover_card:hover button {
+  display: block;
 }
 
-.news-cards > div:hover:before {
-  opacity: 0.8;
-}
-
-.view-more {
-  width: 293px;
-  text-align: center;
-  height: 300px;
-  top: 160px;
-  /* background-color: rgba(137, 43, 226, 0.178); */
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transition: transform 1s cubic-bezier(0, 0.47, 0.96, 0.46);
-}
-
-.btn {
-  width: 164px;
-  height: 56px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  color: #ffffff;
-  background-color: inherit;
-  transform: translate(0px, -230px);
-  transition: all 0.5s ease-in-out;
+.button_hover_card:hover p {
+  transform: translateY(300px);
+  opacity: 0;
 }
 
 .btn:hover {
