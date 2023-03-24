@@ -12,10 +12,10 @@ const Cities = ({ data }) => {
     const [singleData, setSingleData] = useState([]);
     const [zoom, setZoom] = useState(false);
 
-    const res = async (city = 'chennai') => {
+    const res = async (city) => {
         const response = await axios.get(String(process.env.REACT_APP_BACKEND_SINGLE), {
             params: {
-                city: city
+                city: city === '' ? "chennai" : city
             }
         })
         return response?.data ?? [];
