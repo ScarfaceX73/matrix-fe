@@ -47,7 +47,10 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
-  margin: 220px 0px 0px 33px;
+  margin: 0px 0px 0px 33px;
+  height: 255px;
+  display: flex;
+  align-items: end;
 }
 
 .thunder-box > div,
@@ -193,4 +196,32 @@ input::placeholder {
 
 #cities {
   transition: all 1s ease-in-out 0s;
+}
+
+@media screen and (max-width: 1446px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 376px 376px;
+    grid-template-rows: 130px 130px 130px;
+    column-gap: 90px;
+    row-gap: 62px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .weather-cards {
+    display: block;
+  }
+  .city-info {
+    height: 1690px;
+    display: flex;
+    justify-content: center;
+  }
+  .weather-cards > div {
+    margin: 21px 32%;
+  }
+  .inp-div {
+    text-align: center;
+    margin-top: 119px;
+  }
 }

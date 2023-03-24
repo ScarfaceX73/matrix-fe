@@ -128,3 +128,19 @@ a {
 ul {
   list-style-type: none;
 }
+
+@media screen and (max-width: 990px) {
+  .news-cards {
+    display: block;
+  }
+  .news-cards > div > p {
+    margin: 0px 0px 46px 23px;
+    height: 350px;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+  }
+  .news-info {
+    height: 1541px;
+  }
+}
