@@ -16,7 +16,7 @@ function App() {
       'content-type': 'application/json',
     },
     data: {
-      locations: [
+      "locations": [
         {
           "q": "New delhi",
           "custom_id": "0"
