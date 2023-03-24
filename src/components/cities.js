@@ -8,28 +8,22 @@ import { FiSearch } from 'react-icons/fi';
 import axios from 'axios';
 
 const Cities = ({ data }) => {
-    const URL_SINGLE = `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=chennai&days=1&aqi=no&alerts=yes`
     const [search, setSearch] = useState('');
     const [singleData, setSingleData] = useState([]);
     const [zoom, setZoom] = useState(false);
 
-    const res = async (params = 'chennai') => {
-        const response = await axios({
-            url: `http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${params}&days=1&aqi=no&alerts=yes`,
-            method: "GET",
-        });
+    const res = async (city = 'chennai') => {
+        const response = await axios.get(String(process.env.REACT_APP_BACKEND_SINGLE), {
+            params: {
+                city: city
+            }
+        })
         return response?.data ?? [];
     };
-
-    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-    const d = new Date();
-    let day = weekday[d.getDay()];
 
     const handleSearch = async () => {
         const weatherInfo = await res(search);
         setSingleData(weatherInfo)
-        console.log(weatherInfo);
         setZoom(true)
         setSearch('');
     }
