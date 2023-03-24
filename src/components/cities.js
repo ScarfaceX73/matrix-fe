@@ -1,9 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import "./city.css";
-import sun from '../img/sunnyBox.png';
-import thunder from '../img/thunderBox.png';
-import cloud from '../img/cloudBox.png';
-import globe from '../img/earth.png'
 import { FiSearch } from 'react-icons/fi';
 import axios from 'axios';
 
